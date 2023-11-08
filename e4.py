@@ -1,3 +1,9 @@
+"""
+Iker Jiménez López, Aitor Palma, Xavier Cabello
+8/11/2023
+e4 "customerLoyaltyCard.py “dia sense IVA”"
+"""
+
 # Solicita al usuario que ingrese el importe con IVA incluido.
 importe_factura = float(input("Ingresa el importe con IVA incluido: "))
 
