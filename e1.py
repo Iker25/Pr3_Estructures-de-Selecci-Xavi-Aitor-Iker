@@ -5,7 +5,8 @@ e1 "Is bigger"
 """
 
 # Pide dos numeros
-num1, num2 = map(float, input("Añade dos números separados por un espacio: ").split())
+num1 = (int(input("Añade el primer numero: ")))
+num2 = (int(input("Añade el segundo numero: ")))
 
 # Garantiza que el numero1 sea mas pequeño que el numero2
 if num1 > num2:
