@@ -4,17 +4,18 @@ Iker Jiménez López, Aitor Palma, Xavier Cabello
 e3 "fastAndFurios"
 """
 
-
-# Solicita la velocidad inicial, la aceleración y el tiempo
+# Velocidad inicial aceleración y tiempo
 v_i = float(input("Cual es velocidad inicial? "))
 aceleracion = float(input("Cual es la aceleración? "))
 tiempo = float(input("Cual es el tiempo? "))
 
-# Comprueba si el objeto está parado
+# El objeto esta parado?
 if (v_i + (aceleracion * tiempo)) <= 0:
     print("El objeto está parado, por lo tanto no se puede calcular la velocidad media.")
 else:
-    # Calcula la velocidad media
+    # Velocidad media
     v_m = v_i + (aceleracion * tiempo) / 2
     print("La velocidad instantánea es:", v_i + (aceleracion * tiempo), "m/s")
     print("La velocidad media es:", v_m, "m/s")
+
+print("Programa finalizado")

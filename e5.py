@@ -4,23 +4,25 @@ Iker Jiménez López, Aitor Palma, Xavier Cabello
 e5 "isACorrectDate"
 """
 
-# Solicita una fecha en formato DD/MM/AAAA
-fecha = input("Pon una fecha (en formato DD/MM/AAAA): ")
+# Pon la fecha
+fecha = input("Cual es la fecha? (Ponla en formato DD/MM/AAAA) ")
 
 try:
-    dia, mes, año = map(int, fecha.split('/'))
+    d, m, a = map(int, fecha.split('/'))
 
-    # Lista de días por mes
-    dias_por_mes = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    # Comprobación si el año es bisiesto y ajustar el mes febrero si es necesario
+    if (a % 4 == 0 and a % 100 != 0) or (a % 400 == 0):
+        d_febrero = 29
+    else:
+        d_febrero = 28
 
-# Comprueba si el año es bisiesto y ajusta el mes febrero si es necesario
-    if (año % 4 == 0 and año % 100 != 0) or (año % 400 == 0):
-        dias_por_mes[2] = 29
-
-    if 1 <= mes <= 12 and 1 <= dia <= dias_por_mes[mes]:
+    # La fecha es valida
+    if 1 <= m <= 12 and 1 <= d <= [0, 31, d_febrero, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m]:
         print("La fecha es válida.")
+    # La fecha no es valida
     else:
         print("La fecha no es válida.")
 except ValueError:
-    print("Formato de fecha incorrecto")
+    print("El formato de fecha no es correcto")
 
+print("Programa finalizado")

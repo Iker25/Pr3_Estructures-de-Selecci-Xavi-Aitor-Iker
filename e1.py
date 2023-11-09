@@ -12,6 +12,8 @@ num2 = int(input("Añade el segundo numero: "))
 if num1 > num2:
     num1, num2 = num2, num1
 
-# Muestra los valores por pantalla
+# Valores por pantalla
 print("El primer número és:", num1)
 print("El segundo número és:", num2)
+
+print("Programa finalizado")
